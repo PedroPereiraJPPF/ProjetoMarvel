@@ -6,6 +6,11 @@
 
 <form action="/registrar" method="post">
     @csrf
+    @if (session('danger'))
+    <div class='erro'>
+        {{session('danger')}}
+    </div>
+    @endif
     <div class='registro-container'>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" required>
