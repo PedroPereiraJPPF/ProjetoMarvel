@@ -1,0 +1,70 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* css cabeçalho */
+.cabecalho{
+    background-color: #EC1D24;
+    display: block;
+    width: auto;
+    height: 80px;
+}
+.logo{
+    width: 7%;
+    float: left;
+    text-align: center;
+}
+.menu{
+    background-color: #EC1D24;
+    float: right;
+}
+
+.menu ul {
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+    line-height: 40px;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.menu ul li a:hover {
+    background-color: #9F0013;
+}
+.conteudo{
+    width: auto;
+}
+h1{
+    text-align: center;
+}
+/* estilo hqs */
+.hqContainer{
+    width: 200px;
+    margin: 20px auto 0 auto;
+}
+.hqImagem{
+    width: 200px;
+    margin: 0;
+}
+.descrição{
+    background-color: #9F0013;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+.descrição:hover{
+    background-color: #9F0013;
+    color: white;
+    transition: .4s;
+}
+

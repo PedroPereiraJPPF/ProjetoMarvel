@@ -1,0 +1,48 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 0 auto;
+}
+.erro{
+    background: rgb(250, 85, 85);
+    text-align: center;
+    border-radius: 10px;
+}
+.registro-container{
+    height: 200px;
+    max-height: 300px;
+    width: 300px;
+    max-width: 300px;
+    margin: 80px auto 0 auto;
+}
+.button-container{
+    width: auto;
+    margin-top: 5px;
+}
+input[type='text']{
+    width: 250px;
+    height: 30px;
+    outline: none;
+    margin: 10px 0 10px 0;
+}
+button{
+    margin-top: 15px;
+    width: 100px;
+    padding: 11px;
+    outline: none;
+    border: 0 none;
+    background-color: #EC1D24;
+    color: white;
+    border-radius: 3px;
+}
+button:hover{
+    background-color: #9F0013;
+}
+.link{
+    margin-top: 5px;
+}
