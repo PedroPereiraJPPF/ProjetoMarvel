@@ -24,10 +24,7 @@ function Api(limit){
     })
 }
 
-function ajustarLimite(limit=100){
-    return limit;
-}
-Api(ajustarLimite())
+Api(50)
 // pegar dados da api
 function carregarHq($ApiRetorno, div){
     $ApiRetorno.forEach(element => {
@@ -36,12 +33,9 @@ function carregarHq($ApiRetorno, div){
         const acharErro = testeImagem.find(element => element == 'image_not_available.jpg');
         const id = element.id;
         const hqName = element.title;
-        const hqDescription = element.description;
-        const hqCreator = element.creators.items[0];
-        console.log(hqCreator)
         // filtrar imagens undefined
         if(acharErro == undefined){
-            gerarHq(srcImage, hqName, div, hqDescription, hqCreator);
+            gerarHq(srcImage, hqName, div);
         }
     });
 }
