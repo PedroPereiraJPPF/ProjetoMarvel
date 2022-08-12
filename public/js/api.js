@@ -14,17 +14,19 @@ function Api(limit){
         var $ApiRetorno = data.data.results;
         console.log($ApiRetorno);
         carregarHq($ApiRetorno, div)
-        window.addEventListener('scroll', ()=>{
-            if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
-                carregarHq($ApiRetorno, div)
-            }
-        })
     }).catch((err) =>{
         console.log(err)
     })
 }
+var chamadas = 20
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
+        Api(chamadas)
+        chamadas += 20;
+    }
+})
+Api(20)
 
-Api(50)
 // pegar dados da api
 function carregarHq($ApiRetorno, div){
     $ApiRetorno.forEach(element => {

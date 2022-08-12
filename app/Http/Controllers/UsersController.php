@@ -15,9 +15,6 @@ class UsersController extends Controller
     public function store(Request $request) {
 
         $emailVerificado = User::where('email', $request->email)->get();
-        if(isset($emailVerificado)){
-            return redirect('/registro')->with('danger', 'email já existe');
-        }else{
         $senha = \Hash::make($request->senha);
         $user = new User;
         $user->name = $request->nome;
@@ -26,7 +23,7 @@ class UsersController extends Controller
         $user->save();
 
         return redirect('/');
-        }
+
     }
     // login
     public function login(){
