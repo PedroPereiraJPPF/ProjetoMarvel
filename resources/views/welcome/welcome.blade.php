@@ -3,21 +3,6 @@
 @section('title', 'Marvel')
 
 @section('content')
-<header class='cabecalho'>
-    <div class='logo'>
-        <img src="/img/Logo - fav.png" alt="Imagen não encontrada" height='80px'>
-    </div>
-    <nav class='menu'>
-        <ul>
-            @if (Auth::check())
-            <li><a href="http://localhost:8000/logout">Logout</a></li>
-            @else
-            <li><a href="http://localhost:8000/registro">Registrar</a></li>
-            <li><a href="http://localhost:8000/login">Logar</a></li>
-            @endif
-          </ul>
-    </nav>
-</header>
 <section class='conteudo'>
     <?php
     // abertura if check
@@ -36,7 +21,4 @@
     }
     ?>
 </section>
-<footer class='rodape'>
-
-</footer>
 @endsection

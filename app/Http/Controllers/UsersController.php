@@ -15,15 +15,23 @@ class UsersController extends Controller
     public function store(Request $request) {
 
         $emailVerificado = User::where('email', $request->email)->get();
+        $email = $request->email;
+        if(isset($emailVerificado[0]->email)){
+
+        if($emailVerificado[0]->email === $email){
+            return redirect('/registro')->with('danger', 'email ja existe');
+        }
+
+        }else{
         $senha = \Hash::make($request->senha);
         $user = new User;
         $user->name = $request->nome;
-        $user->email = $request->email;
+        $user->email = $email;
         $user->password = $senha;
         $user->save();
 
-        return redirect('/');
-
+        return redirect('/login');
+        }
     }
     // login
     public function login(){

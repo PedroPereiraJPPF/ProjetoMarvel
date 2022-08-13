@@ -37,12 +37,12 @@ function carregarHq($ApiRetorno, div){
         const hqName = element.title;
         // filtrar imagens undefined
         if(acharErro == undefined){
-            gerarHq(srcImage, hqName, div);
+            gerarHq(srcImage, hqName, div, id);
         }
     });
 }
 // renderizar hq
-function gerarHq(srcImage, hqName, div){
+function gerarHq(srcImage, hqName, div, id){
     const divPai = document.createElement('div')
     const divFilho = document.createElement('div')
     const textName = document.createElement('text')
@@ -53,7 +53,7 @@ function gerarHq(srcImage, hqName, div){
     textName.textContent = hqName
     img.src = srcImage
     img.classList.add('hqImagem')
-    a.href='/detalhes'
+    a.href=`/detalhes/${id}`
     
 
     a.appendChild(img)

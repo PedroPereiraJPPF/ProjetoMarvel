@@ -16,4 +16,4 @@ Route::post('/logar', [UsersController::class, 'auth']);
 Route::get('/logout', [UsersController::class, 'logout']);
 
 // rotas de hqs
-Route::get('/detalhes', [HomeController::class, 'detalhes']);
+Route::get('/detalhes/{id?}', [HomeController::class, 'detalhes']);
